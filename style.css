@@ -1,0 +1,46 @@
+body{
+    background-color: rgb(18, 18, 18);
+    margin: 0;
+    color: white;
+    width: 100vw;
+    height: 100vh;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 0 2rem;
+    flex-direction: column;
+    font-family: "IBM Plex Sans", sans-serif;
+
+    &.loading{
+        main{
+            display: none;
+        }
+
+        .loader{
+            display: block;
+        }
+    }
+}
+
+
+/* HTML: <div class="loader"></div> */
+.loader {
+  height: 30px;
+  aspect-ratio: 6;
+  --c: #ffffff00 64%,#ffffff 66% 98%,#0000 101%;
+  background:
+    radial-gradient(35% 146% at 50% 159%,var(--c)) 0 0,
+    radial-gradient(35% 146% at 50% -59%,var(--c)) 25% 100%;
+  background-size: calc(100%/3) 50%;
+  background-repeat: repeat-x;
+  animation: l1 1s infinite linear;
+}
+@keyframes l1{
+  to {background-position: 50% 0,75% 100%}
+}
+
+p{
+    color: #005792;
+}
